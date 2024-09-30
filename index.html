@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Canales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+        .channel-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .channel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 150px;
+            background-color: #1e1e1e;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .channel:hover {
+            transform: scale(1.05);
+        }
+        .channel img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .channel h3 {
+            font-size: 14px;
+            text-align: center;
+            color: #e0e0e0;
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lista de Canales</h1>
+    <div class="channel-list" id="channelList"></div>
+    <div class="error-message" id="errorMessage"></div>
+
+    <script>
+        const jsonUrl = "canales.json";  // Asegúrate de que este archivo esté en el mismo directorio
+
+        // Función para cargar los canales desde el archivo JSON
+        fetch(jsonUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Error ${response.status}: No se pudo cargar el archivo.`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                const channelList = document.getElementById('channelList');
+
+                if (data.canales.length === 0) {
+                    document.getElementById('errorMessage').textContent = "No hay canales disponibles.";
+                } else {
+                    data.canales.forEach(channel => {
+                        const channelDiv = document.createElement('div');
+                        channelDiv.classList.add('channel');
+
+                        const logoImg = document.createElement('img');
+                        logoImg.src = channel['tvg-logo'];
+                        logoImg.alt = channel['tvg-name'];
+
+                        const channelName = document.createElement('h3');
+                        channelName.textContent = channel['tvg-name'];
+
+                        channelDiv.addEventListener('click', () => {
+                            localStorage.setItem('canalSeleccionado', JSON.stringify(channel));
+                            window.location.href = channel['redirect'];
+                        });
+
+                        channelDiv.appendChild(logoImg);
+                        channelDiv.appendChild(channelName);
+                        channelList.appendChild(channelDiv);
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error al cargar el archivo JSON:', error);
+                document.getElementById('errorMessage').textContent = "Error al cargar los canales. Por favor, revisa la URL del JSON.";
+            });
+    </script>
+
+</body>
+</html>

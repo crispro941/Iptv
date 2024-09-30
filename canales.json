@@ -1,0 +1,76 @@
+{
+    "canales": [
+        {
+            "tvg-id": "66f9ecde2e0ce",
+            "tvg-name": "Mega",
+            "tvg-logo": "https:\/\/cdn.m3u.cl\/logo\/455_Mega.png",
+            "description": "Mega",
+            "url": "https:\/\/unlimited1-cl-isp.dps.live\/mega\/mega.smil\/playlist.m3u8?",
+            "redirect": "go:mega"
+        },
+        {
+            "tvg-id": "66f9f0e0a491d",
+            "tvg-name": "TVN",
+            "tvg-logo": "https:\/\/cdn.m3u.cl\/logo\/452_TVN.png",
+            "description": "TVN",
+            "url": "http:\/\/mdstrm.com\/live-stream-playlist-v\/5346f5f2c1e6f5810b5b9df0.m3u8",
+            "redirect": "go:tvn"
+        },
+        {
+            "tvg-id": "66f9f3d403a3e",
+            "tvg-name": "Canal 13",
+            "tvg-logo": "https:\/\/cdn.m3u.cl\/logo\/457_Canal_13.png",
+            "description": "Canal 13",
+            "url": "https:\/\/dai.google.com\/linear\/hls\/pa\/event\/bFL1IVq9RNGlWQaqgiFuNw\/stream\/ece811eb-f921-4bb3-9a2f-f9e04c7e927f:SCL\/master.m3u8",
+            "redirect": "go:c13"
+        },
+        {
+            "tvg-id": "66f9f4f2a2347",
+            "tvg-name": "T13",
+            "tvg-logo": "https:\/\/cdn.m3u.cl\/logo\/1054_T13.png",
+            "description": "T13",
+            "url": "https:\/\/redirector.rudo.video\/hls-video\/10b92cafdf3646cbc1e727f3dc76863621a327fd\/t13\/t13.smil\/playlist.m3u8",
+            "redirect": "go:t13"
+        },
+        {
+            "tvg-id": "66f9f5d39bbdd",
+            "tvg-name": "Sextavision",
+            "tvg-logo": "https:\/\/cdn.m3u.cl\/logo\/341_Sextavision.png",
+            "description": "Sextavision",
+            "url": "https:\/\/5ff3d9babae13.streamlock.net:443\/8020\/8020\/playlist.m3u8",
+            "redirect": "go:sextavision"
+        },
+        {
+            "tvg-id": "66f9fd034840e",
+            "tvg-name": "CONTIVISION",
+            "tvg-logo": "https:\/\/www.contivision.cl\/images\/webclip.png",
+            "description": "CONTIVISION LA TV DE LOS MAULINOS",
+            "url": "https:\/\/unlimited1-cl-isp.dps.live\/cm\/cm.smil\/playlist.m3u8",
+            "redirect": "go:contivision"
+        },
+        {
+            "tvg-id": "66f9fd9e380b5",
+            "tvg-name": "CNN CHILE",
+            "tvg-logo": "https:\/\/i.imgur.com\/Ghaximi.jpg",
+            "description": "CNN CHILE",
+            "url": "http:\/\/unlimited1-cl.dps.live\/cnn\/cnn.smil\/playlist.m3u8",
+            "redirect": "go:cnnchile"
+        },
+        {
+            "tvg-id": "66f9fdcab5e05",
+            "tvg-name": "AHORA NOTICIAS",
+            "tvg-logo": "https:\/\/i.imgur.com\/rrgXoQv.jpg",
+            "description": "AHORA NOTICIAS",
+            "url": "http:\/\/mdstrm.com\/live-stream-playlist\/561430ae330428c223687e1e.m3u8",
+            "redirect": "go:ahoranoticias"
+        },
+        {
+            "tvg-id": "66f9fe371f59b",
+            "tvg-name": "LA RED",
+            "tvg-logo": "https:\/\/i.imgur.com\/IOfmiyP.png",
+            "description": "LA RED",
+            "url": "https:\/\/cl-lared-lared-live.ned.media\/lared\/smil:lared.smil\/playlist.m3u8",
+            "redirect": "go:lared"
+        }
+    ]
+}
